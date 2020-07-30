@@ -1,0 +1,252 @@
+@import url('https://use.typekit.net/lct0dxq.css'); /* adelle-sans */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* roboto */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: roboto, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+header,
+h1 {
+	font-family: 'adelle-sans', sans-serif;
+	text-align: center;
+}
+
+header {
+	font-weight: bold;
+	padding: 0.8em 0 0.8em 0;
+}
+
+.hero {
+	width: 100%;
+	height: 15em;
+	background-color: #111;
+	color: #fff;
+	padding-top: 1.6em;
+}
+
+.hero h1 {
+	margin: 0;
+}
+
+.intro {
+	width: 25em;
+	margin: 60px auto 0 auto;
+	text-align: center;
+}
+
+.intro h2 {
+	margin-bottom: 40px;
+}
+
+main {
+	display: grid;
+	margin: 20px auto;
+	background: linear-gradient(
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 5%,
+		rgba(133, 133, 133, 0.3) 5%,
+		rgba(133, 133, 133, 0.3) 95%,
+		rgba(255, 255, 255, 1) 95%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+
+main img {
+	transition: all ease-in-out 0.25s;
+	filter: saturate(10%);
+}
+
+main img:hover {
+	filter: saturate(200%);
+}
+
+footer {
+	background-color: #111;
+	color: #fff;
+	height: 40px;
+}
+
+/* ------------------------------------------ 
+    Mobile sizing
+------------------------------------------ */
+
+main {
+	width: 320px;
+	grid-template-columns: 2em 3em 4em 3em 1em 3em 1em 3em 1em 3em 8em;
+	grid-template-rows: 11em 2em 5.5em 5.5em 5.5em 3em 11em 3em 5.5em 5.5em 5.5em 2em 11em 3em 9em 2em 2em 11em;
+}
+
+main img {
+	height: 11em;
+	width: 11em;
+}
+
+.profile-pic-1 {
+	grid-column: 6/11;
+	grid-row: 1/2;
+}
+.profile-pic-2 {
+	grid-column: 10/12;
+	grid-row: 3/5;
+}
+.profile-pic-3 {
+	grid-column: 1/5;
+	grid-row: 4/6;
+}
+.profile-pic-4 {
+	grid-column: 3/8;
+	grid-row: 7/8;
+}
+.profile-pic-5 {
+	grid-column: 9/11;
+	grid-row: 9/11;
+}
+.profile-pic-6 {
+	grid-column: 1/5;
+	grid-row: 10/12;
+}
+.profile-pic-7 {
+	grid-column: 7/11;
+	grid-row: 12/13;
+}
+.profile-pic-8 {
+	grid-column: 1/5;
+	grid-row: 14/16;
+}
+.profile-pic-9 {
+	grid-column: 10/12;
+	grid-row: 15/17;
+}
+.profile-pic-10 {
+	grid-column: 2/6;
+	grid-row: 18/19;
+}
+
+/* ------------------------------------------ 
+    Tablet sizing
+------------------------------------------ */
+
+@media (min-width: 768px) {
+	main {
+		width: 720px;
+		grid-template-columns: 5.5em 5.5em 10em 2em 4em 2.5em 4em 2.5em 6.5em 6.5em 4em 6.5em 6.5em 6.5em;
+		grid-template-rows: 23.2em 4.5em 5em 18.4em 5em 3em 23.2em 4.5em 10em 13em 10em 9.5em 9em 14em 9em 5em 18em 5em 18em;
+	}
+
+	main img {
+		height: 22.3em;
+		width: 22.3em;
+	}
+
+	.profile-pic-1 {
+		grid-column: 9/14;
+		grid-row: 1/2;
+	}
+	.profile-pic-2 {
+		grid-column: 11/15;
+		grid-row: 3/5;
+	}
+	.profile-pic-3 {
+		grid-column: 2/6;
+		grid-row: 4/6;
+	}
+	.profile-pic-4 {
+		grid-column: 7/13;
+		grid-row: 7/8;
+	}
+	.profile-pic-5 {
+		grid-column: 10/15;
+		grid-row: 9/11;
+	}
+	.profile-pic-6 {
+		grid-column: 3/8;
+		grid-row: 10/12;
+	}
+	.profile-pic-7 {
+		grid-column: 9/14;
+		grid-row: 13/15;
+	}
+	.profile-pic-8 {
+		grid-column: 1/4;
+		grid-row: 14/16;
+	}
+	.profile-pic-9 {
+		grid-column: 12/15;
+		grid-row: 17/19;
+	}
+	.profile-pic-10 {
+		grid-column: 5/11;
+		grid-row: 18/20;
+	}
+}
+
+/* ------------------------------------------ 
+    Desktop HD sizing
+------------------------------------------ */
+
+@media (min-width: 1200px) {
+	main {
+		width: 80vw;
+		margin: 20px auto;
+
+		/* grid-template-columns: 5.5em 5.5em 10em 2em 4em 2.5em 4em 2.5em 6.5em 6.5em 4em 6.5em 6.5em 6.5em;
+		grid-template-rows: 23.2em 4.5em 5em 18.4em 5em 3em 23.2em 4.5em 10em 13em 10em 9.5em 9em 14em 9em 5em 18em 5em 18em; */
+	}
+
+	main img {
+		height: 32em;
+		width: 32em;
+	}
+
+	.profile-pic-1 {
+		grid-column: 9/14;
+		grid-row: 1/2;
+	}
+	.profile-pic-2 {
+		grid-column: 11/15;
+		grid-row: 3/5;
+	}
+	.profile-pic-3 {
+		grid-column: 2/6;
+		grid-row: 4/6;
+	}
+	.profile-pic-4 {
+		grid-column: 7/13;
+		grid-row: 7/8;
+	}
+	.profile-pic-5 {
+		grid-column: 10/15;
+		grid-row: 9/11;
+	}
+	.profile-pic-6 {
+		grid-column: 3/8;
+		grid-row: 10/12;
+	}
+	.profile-pic-7 {
+		grid-column: 9/14;
+		grid-row: 13/15;
+	}
+	.profile-pic-8 {
+		grid-column: 1/4;
+		grid-row: 14/16;
+	}
+	.profile-pic-9 {
+		grid-column: 12/15;
+		grid-row: 17/19;
+	}
+	.profile-pic-10 {
+		grid-column: 5/11;
+		grid-row: 18/20;
+	}
+}
